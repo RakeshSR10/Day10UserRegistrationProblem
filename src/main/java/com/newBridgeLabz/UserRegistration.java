@@ -79,5 +79,19 @@ public class UserRegistration
             System.out.println("Valid");
         else
             System.out.println("Not valid");
+
+        //UC6 User need to enter valid Password with at least one Uppercase
+        String PASSWORD_PATTERN1 = "^([a-z0-9~!@#$]*[A-Z]){1}[0-9a-zA-Z~!@#$]*$";
+        System.out.println("Enter your Password:");
+        String password1 = scanner.next();
+
+        Pattern pattern5 = Pattern.compile(PASSWORD_PATTERN1);
+        Matcher matcher5 = pattern5.matcher(password1);
+
+        boolean result5 = matcher4.matches();
+        if(result5 == true)
+            System.out.println("Valid");
+        else
+            System.out.println("Not valid");
     }
 }
