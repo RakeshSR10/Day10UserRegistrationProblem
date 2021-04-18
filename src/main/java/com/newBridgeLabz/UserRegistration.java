@@ -88,8 +88,22 @@ public class UserRegistration
         Pattern pattern5 = Pattern.compile(PASSWORD_PATTERN1);
         Matcher matcher5 = pattern5.matcher(password1);
 
-        boolean result5 = matcher4.matches();
+        boolean result5 = matcher5.matches();
         if(result5 == true)
+            System.out.println("Valid");
+        else
+            System.out.println("Not valid");
+
+        //UC7 User need to enter valid Password with at least one numeric number
+        String PASSWORD_PATTERN2 = "^([a-z~!@#$]*[0-9]){1}[0-9a-zA-Z~!@#$]*$";
+        System.out.println("Enter your Password:");
+        String password2 = scanner.next();
+
+        Pattern pattern6 = Pattern.compile(PASSWORD_PATTERN1);
+        Matcher matcher6 = pattern6.matcher(password1);
+
+        boolean result6 = matcher6.matches();
+        if(result6 == true)
             System.out.println("Valid");
         else
             System.out.println("Not valid");
