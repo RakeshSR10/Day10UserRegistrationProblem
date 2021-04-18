@@ -99,11 +99,25 @@ public class UserRegistration
         System.out.println("Enter your Password:");
         String password2 = scanner.next();
 
-        Pattern pattern6 = Pattern.compile(PASSWORD_PATTERN1);
-        Matcher matcher6 = pattern6.matcher(password1);
+        Pattern pattern6 = Pattern.compile(PASSWORD_PATTERN2);
+        Matcher matcher6 = pattern6.matcher(password2);
 
         boolean result6 = matcher6.matches();
         if(result6 == true)
+            System.out.println("Valid");
+        else
+            System.out.println("Not valid");
+
+        //UC8 User need to enter valid Password with at Exactly one Special character
+        String PASSWORD_PATTERN3 = "^([0-9a-zA-Z]*[~!@#$]){1}[0-9a-zA-Z~!@#$]*$";
+        System.out.println("Enter your Password:");
+        String password3 = scanner.next();
+
+        Pattern pattern7 = Pattern.compile(PASSWORD_PATTERN3);
+        Matcher matcher7 = pattern7.matcher(password3);
+
+        boolean result7 = matcher7.matches();
+        if(result7 == true)
             System.out.println("Valid");
         else
             System.out.println("Not valid");
